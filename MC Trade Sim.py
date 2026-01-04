@@ -42,3 +42,27 @@ while True:
             print("Not enough carrots to sell.")
     elif action == "w":
         if wheat >= 20:
+            wheat -= 20
+            emeralds += 1
+            print("Sold 20 wheat for 1 emerald.")
+            print("Wait for 5 seconds.")
+        else:
+            print("Not enough wheat to sell.")
+    elif action == "e":
+        if emeralds >= 1:
+            emeralds -= 1
+            bread += 6
+            print("Bought 6 bread loaves for 1 emerald.")
+            print("Wait for 5 seconds.")
+        else:
+            print("Not enough emeralds to buy bread.")
+    elif action == "q":
+        print("Thanks for playing!")
+        break
+    else:
+        print("Invalid choice.")
+    time.sleep(5)
+    potatoes += 3
+    beetroots += 3
+    wheat += 3
+    carrots += 3
